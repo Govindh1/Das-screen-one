@@ -1,0 +1,208 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4 l3 white p-0">
+      <div class="search-container d-flex">
+        <input type="text" placeholder="Search" [(ngModel)]="clinetNm"> <i class="material-icons"
+          (click)="searchCLient()">search</i>
+        <i class="material-icons">filter_alt</i>
+      </div>
+      <div class="row p-10 border-bottom" *ngFor="let client of clientsData">
+        <div class="col l2 m2">
+          <img src="../../../assets/images/alex.jpg" alt="" class="client-image">
+        </div>
+        <div class="col l10 m10">
+          <div class="primary-text">{{client.name}}</div>
+          <label>{{client.location}}</label>
+        </div>
+      </div>
+      <mat-paginator #paginator [pageSize]="pageSize" [length]="5" (page)="onPageChanged($event)">
+      </mat-paginator>
+    </div>
+    <div class="col s12 m8 l8 m-l-5 p-0">
+      <div class="col s12 l12 m12 white p-0">
+        <mat-tab-group>
+          <mat-tab label="Profile">
+            <div class="col s12 l12 m12 white p-0">
+              <div class="col s12 l12 m12 blue darken-4 p-0 label">Nelson, Scott</div>
+              <div class="col s12 m12 l12 white m-t-b-10">
+                <mat-accordion>
+                  <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Personal Info
+                      </mat-panel-title>
+                      <!-- <mat-panel-description>
+                        Type your name and age
+                      </mat-panel-description> -->
+                      <mat-icon>edit</mat-icon>
+                    </mat-expansion-panel-header>
+                    <div class="d-flex m-t-b-10">
+                      <img src="../../../assets/images/alex.jpg" alt="" class="real-image">
+                      <div class="profile-details">
+                        <label class="f-20 name">Nelson Scott</label> (<label>alias:</label> ScNe01)
+                        <div>Office Name</div>
+                        <div class="col s6 m6 l6 border-right p-0 pt-10">
+                          <div><i class="material-icons">location_on</i> <span class="data-pos"> <label
+                                class="primary-text">123
+                                Springfield Ave</label>, Los Angles, CA
+                              1025</span></div>
+                          <div><i class="material-icons">phone</i> <span class="data-pos"> <label
+                                class="primary-text">23456,
+                                7890123</label></span></div>
+                          <div><i class="material-icons">email</i> <span class="data-pos"> nelsonscott@gmail.com</span>
+                          </div>
+
+                        </div>
+                        <div class="col s6 m6 l6">
+                          <div><label>Date Of Birth: </label>May 25, 1974</div>
+                          <div><label>Gender:</label> Male</div>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-expansion-panel>
+                </mat-accordion>
+                <br>
+                <mat-accordion>
+                  <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Custom Fields
+                      </mat-panel-title>
+                      <!-- <mat-panel-description>
+                        Type your name and age
+                      </mat-panel-description> -->
+                      <mat-icon>edit</mat-icon>
+                    </mat-expansion-panel-header>
+                    <div class="m-t-b-10">
+                      <div>
+                        <label>School Grade:</label> A+
+                      </div>
+                      <div>
+                        <label>Age:</label> 12
+                      </div>
+                      <div>
+                        <label>Class:</label> XII
+                      </div>
+                      <div>
+                        <label>Date Of Birth:</label> Feb 25, 1975
+                      </div>
+                      <div>
+                        <label>School Name:</label> St Teresa, New York
+                      </div>
+                    </div>
+                  </mat-expansion-panel>
+                </mat-accordion>
+                <br>
+                <mat-accordion>
+                  <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Contacts
+                      </mat-panel-title>
+                      <mat-icon>edit</mat-icon>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list cols="2" rowHeight="2:1">
+                      <div class="col s6 m6 l6 p-20">
+                        <mat-card>
+                          <div class="card-title p-10">parents</div>
+
+                          <div class="m-t-b-10 p-20">
+                            <div> Mr & Mrs Smith </div>
+                            <div class="p-0 pt-10">
+                              <div><i class="material-icons">location_on</i> <span class="data-pos"> <label
+                                    class="primary-text">123
+                                    Springfield Ave</label>, Los Angles, CA
+                                  1025</span></div>
+                              <div><i class="material-icons">phone</i> <span class="data-pos"> <label
+                                    class="primary-text">23456,
+                                    7890123</label></span></div>
+                              <div><i class="material-icons">email</i> <span class="data-pos">
+                                  nelsonscott@gmail.com</span>
+                              </div>
+
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                      <div class="col s6 m6 l6 p-20">
+                        <mat-card>
+                          <div class="card-title p-10">parents</div>
+
+                          <div class="m-t-b-10 p-20">
+                            <div> Mr & Mrs Smith </div>
+                            <div class="p-0 pt-10">
+                              <div><i class="material-icons">location_on</i> <span class="data-pos"> <label
+                                    class="primary-text">123
+                                    Springfield Ave</label>, Los Angles, CA
+                                  1025</span></div>
+                              <div><i class="material-icons">phone</i> <span class="data-pos"> <label
+                                    class="primary-text">23456,
+                                    7890123</label></span></div>
+                              <div><i class="material-icons">email</i> <span class="data-pos">
+                                  nelsonscott@gmail.com</span>
+                              </div>
+
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                      <div class="col s6 m6 l6 p-20">
+                        <mat-card>
+                          <div class="card-title p-10">parents</div>
+
+                          <div class="m-t-b-10 p-20">
+                            <div> Mr & Mrs Smith </div>
+                            <div class="p-0 pt-10">
+                              <div><i class="material-icons">location_on</i> <span class="data-pos"> <label
+                                    class="primary-text">123
+                                    Springfield Ave</label>, Los Angles, CA
+                                  1025</span></div>
+                              <div><i class="material-icons">phone</i> <span class="data-pos"> <label
+                                    class="primary-text">23456,
+                                    7890123</label></span></div>
+                              <div><i class="material-icons">email</i> <span class="data-pos">
+                                  nelsonscott@gmail.com</span>
+                              </div>
+
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                      <div class="col s6 m6 l6 p-20">
+                        <mat-card>
+                          <div class="card-title p-10">parents</div>
+
+                          <div class="m-t-b-10 p-20">
+                            <div> Mr & Mrs Smith </div>
+                            <div class="p-0 pt-10">
+                              <div><i class="material-icons">location_on</i> <span class="data-pos"> <label
+                                    class="primary-text">123
+                                    Springfield Ave</label>, Los Angles, CA
+                                  1025</span></div>
+                              <div><i class="material-icons">phone</i> <span class="data-pos"> <label
+                                    class="primary-text">23456,
+                                    7890123</label></span></div>
+                              <div><i class="material-icons">email</i> <span class="data-pos">
+                                  nelsonscott@gmail.com</span>
+                              </div>
+
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                    </mat-grid-list>
+                  </mat-expansion-panel>
+                </mat-accordion>
+
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Authorization"> Curruntly No Data Available To Show </mat-tab>
+          <mat-tab label="Cabinet"> Curruntly No Data Available To Show </mat-tab>
+          <mat-tab label="Schedule"> Curruntly No Data Available To Show </mat-tab>
+        </mat-tab-group>
+      </div>
+
+    </div>
+  </div>
+</div>
